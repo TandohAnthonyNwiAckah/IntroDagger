@@ -2,11 +2,12 @@ package com.tanacom.introdagger.models;
 
 import javax.inject.Inject;
 
-public class Engine {
+public interface Engine {
 
-    @Inject
-    public Engine() {
-    }
+//    @Inject
+//    public Engine() {
+//    }
 
+    void start();
 
 }

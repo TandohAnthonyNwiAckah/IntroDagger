@@ -9,7 +9,7 @@ public class Tires {
 
 
     public void inflate() {
-        Log.d(TAG, "Inflated ...");
+        Log.d(TAG, "Inflated Tires ...");
     }
 
 }

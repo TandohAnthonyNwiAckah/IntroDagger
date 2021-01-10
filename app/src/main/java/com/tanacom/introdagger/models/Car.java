@@ -22,13 +22,11 @@ public class Car {
 //        this.wheel = wheel;
 //    }
 
-
     @Inject
     public Car(Engine engine, Wheel wheel) {
         this.engine = engine;
         this.wheel = wheel;
     }
-
 
     @Inject
     public void enableRemote(Remote remote) {
@@ -38,7 +36,9 @@ public class Car {
 
     public void drive() {
         Log.d(TAG, "driving");
-    }
 
+        engine.start();
+
+    }
 
 }
