@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     //    Initiate Car method
     private void initCar() {
+
         CarComponent carComponent = DaggerCarComponent.create();
 
 //        car = carComponent.getCar();
