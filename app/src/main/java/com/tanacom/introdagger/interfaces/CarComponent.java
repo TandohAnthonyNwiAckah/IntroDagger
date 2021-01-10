@@ -1,6 +1,7 @@
 package com.tanacom.introdagger.interfaces;
 
 
+import com.tanacom.introdagger.MainActivity;
 import com.tanacom.introdagger.models.Car;
 
 import dagger.Component;
@@ -9,7 +10,8 @@ import dagger.Component;
 public interface CarComponent {
 
 
-    Car getCar();
+//    Car getCar();
 
+     void inject(MainActivity activity);
 
 }

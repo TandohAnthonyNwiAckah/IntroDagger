@@ -9,9 +9,13 @@ import com.tanacom.introdagger.interfaces.CarComponent;
 import com.tanacom.introdagger.interfaces.DaggerCarComponent;
 import com.tanacom.introdagger.models.Car;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Car car;
+//    private Car car;
+
+    @Inject Car car;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
     private void initCar() {
         CarComponent carComponent = DaggerCarComponent.create();
 
-        car = carComponent.getCar();
+//        car = carComponent.getCar();
+
+        carComponent.inject(MainActivity.this);
 
         car.drive();
 
